@@ -228,4 +228,7 @@ return [
 
     ],
 
+    'domestic_per_km' => 3,
+    'international_per_km' => 5,
+
 ];
