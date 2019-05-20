@@ -10,6 +10,20 @@
         </div>
         <div class="row">
             <div class="col-md-12">
+                <ul class="breadcrumb">
+                    <li class="active">
+                        Список посылок
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <a class="btn btn-primary" href="{{route('parcel.create')}}">Создать</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
                 @include('form_blocks.errors')
                 @include('form_blocks.session_info')
             </div>

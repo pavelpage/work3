@@ -8,6 +8,18 @@
                 <h1>{{$pageTitle}}</h1>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="breadcrumb">
+                    <li>
+                        <a href="{{route('parcel.index')}}">Список посылок</a>
+                    </li>
+                    <li class="active">{{$pageTitle}}</li>
+                </ul>
+            </div>
+        </div>
+
         <div class="row">
             <div class="col-md-12">
                 @include('form_blocks.errors')
