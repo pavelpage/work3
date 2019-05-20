@@ -11,9 +11,6 @@ class ParcelController extends Controller
     public function index()
     {
         $items = Parcel::paginate(20);
-        $items->each(function ($item){
-            $item->price = config('app.domestic_per_km')*$item->km_domestic + config('app.international_per_km') * $item->km_international;
-        });
 
         return view('index', [
             'pageTitle' => 'Список записей',
@@ -37,6 +34,7 @@ class ParcelController extends Controller
             'to' => 'required',
             'km_domestic' => 'required',
             'km_international' => 'required',
+            'price' => 'required',
         ]);
 
         $parcel = Parcel::create($data);
@@ -67,6 +65,7 @@ class ParcelController extends Controller
             'to' => 'required',
             'km_domestic' => 'required',
             'km_international' => 'required',
+            'price' => 'required',
         ]);
 
         Parcel::where('id', $id)->update($data);

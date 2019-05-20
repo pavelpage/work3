@@ -20,6 +20,7 @@ class CreateParcelsTable extends Migration
             $table->string('to');
             $table->integer('km_domestic');
             $table->integer('km_international');
+            $table->integer('price');
             $table->timestamps();
         });
     }

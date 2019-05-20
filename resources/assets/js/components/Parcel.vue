@@ -45,7 +45,7 @@
 
             </fieldset>
 
-
+            <input type="hidden" name="price" :value="price">
 
             <div class="form-group">
                 <div class="col-md-9 col-md-offset-3">
